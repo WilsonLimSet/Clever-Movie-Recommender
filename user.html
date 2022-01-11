@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <h1>Welcome to Clever Movie Recommender!</h1>
+        <p>If you want a movie recommendation, enter a movie you love below:</p>
+        <form action="/get_recs" method="POST">
+            <input type="title" name="title" placeholder="Toy Story">
+            <input type="submit" value="Get Recommendation">
+        </form>
+        <p>Or you can view rankings based on Genre.</p>
+        <form action="/rank" method="POST">
+            <input type="radio" id="genre1"
+             name="genre" value="Horror">
+            <label for="genre1">Horror</label>
+
+            <input type="radio" id="genre2"
+             name="genre" value="Comedy">
+            <label for="genre2">Comedy</label>
+
+            <input type="radio" id="genre3"
+             name="genre" value="Action">
+            <label for="genre3">Action</label>
+
+            <input type="radio" id="genre4"
+             name="genre" value="Romance">
+            <label for="genre4">Romance</label>
+
+            <input type="radio" id="genre5"
+             name="genre" value="Drama">
+            <label for="genre5">Drama</label>
+
+            <input type="radio" id="genre6"
+             name="genre" value="Thriller">
+            <label for="genre6">Thriller</label>
+
+            <input type="submit" value="View Rankings">
+        </form>
+
+        <br>
+        <img id="picture" src="data:image/jpeg;base64,{{ img_data }}">
+    </body>
+</html>
